@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>treine.me figma</title>
+    <link rel="icon" type="image/x-icon" href="./assests/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <!-- treine.me logo -->
+          <a href="#">treine.me</a>
+        </div>
+        <!-- hamburger menu for small screens -->
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="bx bx-menu"></i>
+        </div>
+        <!-- navigation links -->
+        <ul class="nav-links">
+          <div class="home">
+            <li><a href="#">Home</a></li>
+          </div>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Training</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main content of treine.me -->
+    <main class="main-content">
+      <section class="intro">
+        <h1>WORKOUTS MADE</h1>
+        <div>
+          <h1 class="target">
+            <span class="highlight"><br />EXCLUSIVE</span> FOR YOU!
+          </h1>
+        </div>
+        <p>
+          We create <strong>exclusive and unique workouts</strong> for you.
+          <br />
+          invest in your body and <strong>get much more performance</strong
+          ><br />
+          and quality of life.
+        </p>
+        <!-- whatsapp button code with -->
+        <button class="cta-button">
+          <i class="bx bxl-whatsapp"></i> Start now
+        </button>
+      </section>
+
+      <!-- fitness image code -->
+      <section class="image=section">
+        <img src="assests/fitness-jump.svg" alt="fitness-jump" />
+      </section>
+    </main>
+
+    <!-- script for toggle the humburger menu in responsive bar -->
+    <script>
+      function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
