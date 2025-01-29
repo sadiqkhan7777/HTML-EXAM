@@ -27,6 +27,7 @@ body {
   display: flex;
   gap: 2rem;
   margin-top: 20px;
+
 }
 
 .nav-links a {
@@ -37,7 +38,7 @@ body {
 .login-container {
   display: flex;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 
 .login a {
@@ -72,7 +73,6 @@ body {
   background-color: #ff5722;
 }
 
-/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
@@ -123,8 +123,9 @@ body {
 .brand a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 24px;
+  /* font-weight: bold; */
   gap: 2px;
+  font-size: 24px;
   margin-right: 150px;
   margin-left: 105px;
 }
@@ -164,7 +165,6 @@ body {
   line-height: 1.6;
 }
 
-
 .card {
   background-color: #FFFFFF;
   text-align: center;
@@ -199,9 +199,8 @@ body {
 }
 
 .red-bar {
-  width: 50px;
-  height: 2px;
-  background-color: #FC724D;
+  width: 50px;  height: 2px;
+  background-color: #FC724D; 
   margin: auto;
   margin-top: -10px;
   margin-bottom: -10px;
@@ -282,6 +281,7 @@ body {
 }
 
 .section-header {
+  flex-wrap: wrap;
   margin-top: 120px;
   margin-bottom: 60px;
 }
@@ -322,8 +322,6 @@ body {
 
 .card {
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 300px;
   text-align: center;
@@ -337,6 +335,8 @@ body {
 
 .card-image {
   position: relative;
+  display: inline-block;
+  width: 100%; 
   overflow: hidden;
 }
 
@@ -346,16 +346,47 @@ body {
   display: block;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-image:hover .overlay {
+  opacity: 1;
+}
+
+.overlay i {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.overlay i:hover {
+  color: #FC724D; 
+  transform: scale(1.2);
+}
+
 .badge {
   position: absolute;
   top: 10px;
   left: 10px;
-  background-color: #fc724d;
-  color: #ffffff;
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  background-color: #FC724D;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
 }
+
 
 .card-content {
   text-align: left;
@@ -411,17 +442,6 @@ body {
   border-radius: 30px;
 }
 
-/* .overlay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  display: flex;
-  justify-content: space-around;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-} */
-
 .profile-img {
   width: 128px;
   height: 128px;
@@ -452,7 +472,7 @@ body {
 .faq-quote {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards in a row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 20px;
   max-width: 1000px;
@@ -466,23 +486,24 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 333px;
-  height: 151px;
-  color: #2C3A47;
-  text-align: left;
+  height: 151px;  
+  color: #2C3A47; 
+  text-align: left; 
 }
 
 .card-quote p {
-  color: #2C3A47;
+  color: #2C3A47; 
+  
 }
 
 .description span i {
-  color: #FC724D;
+  color: #FC724D; 
   font-size: 20px;
 }
 
 .card-quote p:last-child {
   font-size: 14px;
-  color: #737373;
+  color: #737373; 
   margin-top: 5px;
 }
 
@@ -517,6 +538,7 @@ body {
   position: relative;
   max-width: 500px;
   margin: 0 auto;
+
 }
 
 .newsletter-input {
@@ -535,7 +557,7 @@ body {
   height: 50px;
   transform: translateY(-50%);
   padding: 8px 20px;
-  background-color: #FF6E6E;
+  background-color: #FF6E6E; 
   color: white;
   border: none;
   font-size: 14px;
@@ -544,7 +566,7 @@ body {
 }
 
 .subscribe-button:hover {
-  background-color: #FF4E4E;
+  background-color: #FF4E4E; 
 }
 
 /* Responsive Design */
@@ -559,6 +581,9 @@ body {
       gap: 1rem;
   }
 
+  .section-header {
+    flex-wrap: wrap;
+  }
   .hero {
       flex-direction: column;
   }
